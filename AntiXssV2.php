@@ -36,7 +36,7 @@ class Anti_XSS
     // DB Function in Ban IP
     public function db($user,$pass){
         try{
-            $dsn = "mysql:host=localhost;dbname=xss;
+            $dsn = "mysql:host=localhost;dbname=xss";
             $cons = new PDO($dsn,$user,$pass);
             $query="INSERT INTO `baner` (`id`, `ip`) VALUES (NULL, ?);";
             $con = $cons->prepare($query);
